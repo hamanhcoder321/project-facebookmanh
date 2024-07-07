@@ -701,6 +701,9 @@ body,html{
     padding-top: 25px;
     height: 220px;
   }
+  .profile-dropdown{
+    height: 425px;
+  }
   .baiviet input{
     width: 290px;
   }
