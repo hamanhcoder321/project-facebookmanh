@@ -704,4 +704,14 @@ body,html{
   .baiviet input{
     width: 290px;
   }
+  .anh-tinmoi img {
+    width: 390px;
+    margin-right: 10px;
+  }
+  .dangtinmoi-moi{
+    width: 390px;
+  }
+  .anh-tinmoi video{
+    width: 390px;
+  }
 }
