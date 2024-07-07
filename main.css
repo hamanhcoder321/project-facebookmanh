@@ -594,7 +594,6 @@ body,html{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid #ddd;
 }
@@ -709,10 +708,10 @@ body,html{
   }
   .anh-tinmoi img {
     width: 390px;
-    margin-right: 10px;
+    padding-top: 5px;
   }
   .dangtinmoi-moi{
-    width: 390px;
+    width: 395px;
   }
   .anh-tinmoi video{
     width: 390px;
