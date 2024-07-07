@@ -70,4 +70,3 @@ function showCommentBox() {
     // Đoạn code để hiển thị comment box, bạn có thể thay thế bằng các thao tác cụ thể khi cần
     console.log('Comment box được hiển thị');
 }
-
