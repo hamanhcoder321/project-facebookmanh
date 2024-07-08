@@ -70,3 +70,34 @@ function showCommentBox() {
     // Đoạn code để hiển thị comment box, bạn có thể thay thế bằng các thao tác cụ thể khi cần
     console.log('Comment box được hiển thị');
 }
+
+//bình luận
+document.querySelectorAll('.comment-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const commentInput = this.querySelector('.comment-input');
+        const commentText = commentInput.value.trim();
+
+        if (commentText !== '') {
+            const commentContainer = this.nextElementSibling;
+
+            // Tạo một phần tử bình luận mới
+            const commentElement = document.createElement('div');
+            commentElement.classList.add('comment');
+            commentElement.textContent = commentText;
+
+            // Thêm bình luận mới vào container bình luận
+            commentContainer.appendChild(commentElement);
+
+            // Xóa nội dung của input sau khi gửi bình luận
+            commentInput.value = '';
+        }
+    });
+});
+
+// Hàm để hiển thị bình luận
+function showCommentBox(commentIcon) {
+    const commentSection = commentIcon.closest('.dangtinmoi-moi').querySelector('.comment-section');
+    commentSection.style.display = 'block';
+}

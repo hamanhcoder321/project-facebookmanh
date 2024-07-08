@@ -612,6 +612,48 @@ body,html{
 .reaction-icons i.active {
   color: #1877F2; /* Màu của biểu tượng khi đã like */
 }
+/*bình luận*/
+.comment-section {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.comment-form {
+  margin-bottom: 10px;
+}
+
+.comment-input {
+  width: 395px;
+  height: 60px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  resize: none;
+}
+
+.comment-form button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #0056b3;
+}
+
+.comments-container .comment {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.comments-container .comment:last-child {
+  border-bottom: none;
+}
 @media (max-width: 899px) and (max-width: 876px) {
   .slide-bar-right {
     display: block;

@@ -173,11 +173,20 @@
                                 <div class="reaction-bar">
                                     <div class="reaction-icons">
                                         <i class="far fa-thumbs-up" id="likebtn"></i>
-                                        <i class="far fa-comment" onclick="showCommentBox()"></i>
+                                        <i class="far fa-comment" onclick="showCommentBox(this)"></i>
                                         <i class="fas fa-share"></i>
                                     </div>
                                 </div>
-                            </div>
+                                <!--bình luận -->
+                                <div class="comment-section" style="display: none;">
+                                    <form class="comment-form">
+                                        <textarea class="comment-input" placeholder="Viết bình luận..." required></textarea>
+                                        <button type="submit">Bình luận</button>
+                                    </form>
+                                    <div class="comments-container">
+                                    </div>
+                                </div>
+                            </div>                            
                             <div class="dangtinmoi-moi">
                                 <div class="tinmoi">
                                     <img src="./Img/449512138_988315586082229_5999293927715777473_n.jpg" alt="">
@@ -198,9 +207,18 @@
                                     </video>
                                     <div class="reaction-bar">
                                         <div class="reaction-icons">
-                                            <i class="far fa-thumbs-up"></i>
-                                            <i class="far fa-comment"></i>
+                                            <i class="far fa-thumbs-up" id="likebtn"></i>
+                                            <i class="far fa-comment" onclick="showCommentBox(this)"></i>
                                             <i class="fas fa-share"></i>
+                                        </div>
+                                    </div>
+                                    <!--bình luận -->
+                                    <div class="comment-section" style="display: none;">
+                                        <form class="comment-form">
+                                            <textarea class="comment-input" placeholder="Viết bình luận..." required></textarea>
+                                            <button type="submit">Bình luận</button>
+                                        </form>
+                                        <div class="comments-container">
                                         </div>
                                     </div>
                                 </div>
