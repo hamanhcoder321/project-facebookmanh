@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Hàm hiển thị comment box khi click vào biểu tượng Comment
 function showCommentBox() {
-    // Đoạn code để hiển thị comment box, bạn có thể thay thế bằng các thao tác cụ thể khi cần
     console.log('Comment box được hiển thị');
 }
 
@@ -75,6 +74,8 @@ function showCommentBox() {
 document.querySelectorAll('.comment-form').forEach(form => {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
+        //.forEach(form => { ... }): NodeList có phương thức forEach, 
+       // cho phép bạn lặp qua từng phần tử trong danh sách. Trong trường hợp này, nó lặp qua từng biểu mẫu (form) với lớp .comment-form.
         
         const commentInput = this.querySelector('.comment-input');
         const commentText = commentInput.value.trim();
