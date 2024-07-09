@@ -1,0 +1,60 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(41, 36, 36);
+    height: 100%;
+    display: flex;
+}
+.slide-bar-1 {
+    display: flex;
+    border: 1px solid red;
+    width: 60px;
+    height: 100%;
+    justify-content: flex-start;
+    background-color: #575240;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.icons i {
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: #ddd;
+}
+.icons .comment{
+    top: 0;
+    left: 0;
+    padding: 10px;
+    transform: translateX(-50%);
+    position: relative;
+}
+.slide-bar-1 img{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 40px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
