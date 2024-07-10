@@ -118,7 +118,9 @@ body,html{
   justify-content: center;
   align-items: center;
 }
-
+.menu-link a{
+  text-decoration: none;
+}
 .profile-icon-container {
   position: relative;
   display: inline-block;
