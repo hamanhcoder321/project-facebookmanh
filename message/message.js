@@ -1,0 +1,38 @@
+var storyList = document.querySelector('.story-list');
+var storyItems = document.querySelectorAll('.story-item');
+var leftArrow = document.querySelector('.left-arrow');
+var rightArrow = document.querySelector('.right-arrow');
+
+var currentIndex = 0;
+var itemsPerPage = 4;
+
+function updateStoryList() {
+    var totalItems = storyItems.length;
+    var visibleItems = Math.min(itemsPerPage, totalItems);
+    storyItems.forEach(item => item.style.display = 'none');
+    for (var i = currentIndex; i < currentIndex + visibleItems; i++) {
+        if (i < totalItems) {
+            storyItems[i].style.display = 'block';
+        }
+    }
+    var offset = currentIndex * (storyItems[0].clientWidth + 10);
+    storyList.style.transform = `translateX(-${offset}px)`;
+}
+
+leftArrow.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateStoryList();
+    }
+});
+
+rightArrow.addEventListener('click', () => {
+    if (currentIndex < storyItems.length - itemsPerPage) {
+        currentIndex++;
+        updateStoryList();
+    }
+});
+
+window.addEventListener('resize', updateStoryList);
+
+updateStoryList();
