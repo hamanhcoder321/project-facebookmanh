@@ -58,3 +58,16 @@ html, body {
     transform: translateX(-50%);
     border-radius: 50%;
 }
+.slide-bar-2{
+    display: flex;
+    border: 1px solid red;
+    width: 200px;
+    height: 100%;
+    justify-content: flex-start;
+    background-color: #575240;
+}
+.chats-icon{
+    border: 1px solid red;
+    width: 200px;
+    height: 40px;
+}

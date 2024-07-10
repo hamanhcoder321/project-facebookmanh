@@ -121,6 +121,20 @@ body,html{
 .menu-link a{
   text-decoration: none;
 }
+
+.header__cart-notice {
+  position: absolute;
+  top: -1px;
+  right: 190px;
+  padding: 0px 6px;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  border-radius: 50%;
+  border: 2px solid #ee4d2d;
+  color: var(--primary-color);
+  background-color: var(--white-color);
+}
+
 .profile-icon-container {
   position: relative;
   display: inline-block;
@@ -763,5 +777,10 @@ body,html{
   }
   .comment-input{
     width: 350px;
+  }
+  .header__cart-notice {
+    font-size: 0.9rem;
+    top: 1px;
+    right: 92px;
   }
 }
