@@ -785,7 +785,12 @@ body,html{
   }
   .header__cart-notice {
     font-size: 0.9rem;
-    top: 1px;
-    right: 95px;
+    top: -1px;
+    right: 98px;
+    padding: 0px 6px;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    width: 10px;
+    height: 20px;
   }
 }
