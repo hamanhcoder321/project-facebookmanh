@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #3498db; /* Màu xanh dương */
+  --white-color: #ffffff;   /* Màu trắng */
+}
+
 body,html{
   box-sizing: border-box;
   margin: 0;
@@ -125,14 +130,14 @@ body,html{
 .header__cart-notice {
   position: absolute;
   top: -1px;
-  right: 190px;
+  right: 195px;
   padding: 0px 6px;
   font-size: 0.9rem;
   line-height: 1.4rem;
   border-radius: 50%;
-  border: 2px solid #ee4d2d;
-  color: var(--primary-color);
-  background-color: var(--white-color);
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: red;
 }
 
 .profile-icon-container {
@@ -781,6 +786,6 @@ body,html{
   .header__cart-notice {
     font-size: 0.9rem;
     top: 1px;
-    right: 94px;
+    right: 95px;
   }
 }
