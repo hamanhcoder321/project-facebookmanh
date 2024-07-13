@@ -102,3 +102,20 @@ function showCommentBox(commentIcon) {
     const commentSection = commentIcon.closest('.dangtinmoi-moi').querySelector('.comment-section');
     commentSection.style.display = 'block';
 }
+
+//video phát tự động
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('myVideo');
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    });
+
+    observer.observe(video);
+});
