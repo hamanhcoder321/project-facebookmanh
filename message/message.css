@@ -151,12 +151,6 @@ html, body {
     height: 60px; /* Đặt chiều cao cố định cho hình ảnh */
     object-fit: cover;
     border-radius: 50%;
-    transition: transform 0.5s ease;
-}
-
-.story-item img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 .story-caption {
