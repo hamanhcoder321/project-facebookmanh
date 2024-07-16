@@ -53,7 +53,6 @@ window.addEventListener('click', function(event) {
 });
 
 //nút like và comment
-// Xử lý sự kiện khi click vào nút Like
 document.addEventListener('DOMContentLoaded', function() {
     // Xử lý sự kiện khi click vào biểu tượng Like
     var likeBtns = document.querySelectorAll('.far.fa-thumbs-up');
