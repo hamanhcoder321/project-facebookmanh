@@ -98,6 +98,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 document.addEventListener("DOMContentLoaded", function() {
     const userLinks = document.querySelectorAll('.user-link ul li');
+    const chatApp = document.getElementById('chat-app');
+    const slideBar2 = document.querySelector('.slide-bar-2');
+    const chatsApp = document.querySelector('.chats-app');
+    const returnIcon = document.querySelector('.return-icon');
 
     userLinks.forEach((userLink) => {
         userLink.addEventListener('click', function() {
@@ -121,41 +125,67 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
 
             // Display the chat-app element
-            const chatApp = document.getElementById('chat-app');
             chatApp.style.display = 'block';
+
+            // Hide slide-bar-2 and show chats-app on mobile
+            if (window.innerWidth <= 768) {
+                slideBar2.classList.add('hidden');
+                chatsApp.classList.add('show');
+            }
         });
     });
 
-    // Handle click events on slide-bar-2 items to hide slide-bar-2 and show chats-app on mobile
-    const slideBar2Items = document.querySelectorAll('.slide-bar-2 .chats-icon, .slide-bar-2 .search-input,.slide-bar-2 .user-link');
-
-    slideBar2Items.forEach((item) => {
-        item.addEventListener('click', function() {
-            const slideBar2 = document.querySelector('.slide-bar-2');
-            const chatsApp = document.querySelector('.chats-app');
-
-            slideBar2.classList.add('hidden');
-            chatsApp.classList.add('show');
-        });
+    // Handle return icon click to show user-link and hide chats-app
+    returnIcon.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            slideBar2.classList.remove('hidden');
+            chatsApp.classList.remove('show');
+        }
     });
 
-    // Handle click events on story items to display corresponding content
+    // Handle send message button click
+    const sendMessageBtn = document.getElementById('send-message-btn');
+    const messageInput = document.getElementById('message-input');
+
+    sendMessageBtn.addEventListener('click', function() {
+        const messageContent = messageInput.value.trim();
+
+        if (messageContent !== '') {
+            // Create and append sent message
+            const chatMessages = document.querySelector('.chat-messages');
+            const sentMessageHTML = `
+                <div class="message sent">
+                    <div class="message-content">${messageContent}</div>
+                </div>
+            `;
+            chatMessages.insertAdjacentHTML('beforeend', sentMessageHTML);
+
+            // Clear input after sending
+            messageInput.value = '';
+        }
+    });
+
+    // Handle Enter key press in message input
+    messageInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            sendMessageBtn.click(); // Trigger send message button click
+        }
+    });
+
+    // Handle story item clicks
     const storyItems = document.querySelectorAll('.story-item');
 
     storyItems.forEach((storyItem) => {
         storyItem.addEventListener('click', function() {
             const storyCaption = storyItem.querySelector('.story-caption').textContent;
-
-            // Example action: replace chat-messages content with the clicked story item's caption
             const chatMessages = document.querySelector('.chat-messages');
             chatMessages.innerHTML = `
                 <div class="message received">
                     <div class="message-content">${storyCaption}</div>
                 </div>
             `;
-            
+
             // Display the chat-app element
-            const chatApp = document.getElementById('chat-app');
             chatApp.style.display = 'block';
         });
     });

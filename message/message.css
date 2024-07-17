@@ -189,7 +189,7 @@ html, body {
 }
 
 .right-arrow {
-    right: 10px;
+    right: 20px;
 }
 
 .user-link {
@@ -245,19 +245,17 @@ html, body {
 .user-link .status {
     color: gray;
 }
-/* Thêm lớp CSS để ẩn phần chat */
 #chat-app {
     border-radius: 10px;
     flex-grow: 1;
     flex-direction: column;
     margin-left: 5px;
     overflow: hidden;
-    display: none; /* Mặc định ẩn đi */
+    display: none; 
 }
 
-/* Thêm lớp CSS để hiển thị phần chat khi active */
 #chat-app.chat-active {
-    display: flex; /* Hiển thị khi có lớp .chat-active */
+    display: flex; 
     flex-direction: column;
 }
 
@@ -360,7 +358,11 @@ html, body {
 .chats-app {
     display: none;
 }
-
+.return-icon {
+    display: none; 
+    margin-right: 10px;
+    cursor: pointer;
+}
 @media (max-width: 768px)  {
     .slide-bar-1 {
         display: none;
@@ -377,7 +379,10 @@ html, body {
     .chats-app.show {
         display: block;
     }
-    .chats-app{
-        height: 420px;
+    .chat-messages{
+        height: 500px;
+    }
+    .return-icon {
+        display: inline;
     }
 }
