@@ -486,8 +486,11 @@ body,html{
 .profile-dropdown-menu li {
   padding: 10px;
   cursor: pointer;
+  display: block;
 }
-
+.profile-dropdown-menu li i{
+  display: block;
+}
 .profile-dropdown-menu li:hover {
   background-color: #898888;
 }
@@ -732,7 +735,6 @@ body,html{
     padding-right: 0;
     padding-top: 5px;
   }
-
   .story-item {
     width: 100px;
     height: 170px;

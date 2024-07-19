@@ -190,3 +190,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menu-icon');
+    const slideBar1 = document.getElementById('slide-bar-1');
+    const closeSidebar = document.getElementById('close-sidebar');
+
+    menuIcon.addEventListener('click', function () {
+        slideBar1.classList.toggle('active');
+        closeSidebar.classList.toggle('active');
+    });
+
+    closeSidebar.addEventListener('click', function () {
+        slideBar1.classList.remove('active');
+        closeSidebar.classList.remove('active');
+    });
+});
