@@ -17,6 +17,13 @@ function updateStoryList() {
     }
     var offset = currentIndex * (storyItems[0].clientWidth + 10);
     storyList.style.transform = `translateX(-${offset}px)`;
+    /*
+    totalItems: Lấy tổng số các mục trong danh sách tin.
+    visibleItems: Tính số mục sẽ hiển thị dựa trên itemsPerPage và tổng số mục.
+    storyItems.forEach(item => item.style.display = 'none'): Ẩn tất cả các mục trong danh sách tin.
+    Vòng lặp for: Hiển thị các mục trong khoảng từ currentIndex đến currentIndex + visibleItems.
+    offset: Tính khoảng cách dịch chuyển dựa trên chiều rộng của các mục.
+    */
 }
 
 leftArrow.addEventListener('click', () => {
@@ -95,6 +102,21 @@ document.addEventListener("DOMContentLoaded", function() {
             sendMessageBtn.click(); // Kích hoạt sự kiện click trên nút gửi tin nhắn
         }
     });
+    /*
+    document.addEventListener("DOMContentLoaded", function() {...}): Đảm bảo mã chỉ chạy khi DOM đã được tải hoàn toàn.
+    userLinks.forEach((userLink) => {...}): Lặp qua các liên kết người dùng và thêm sự kiện nhấp.
+    userLink.addEventListener('click', function() {...}): Khi nhấp vào một liên kết người dùng:
+    Lấy tên và hình ảnh người dùng.
+    Cập nhật thông tin người dùng trong header chat.
+    Hiển thị các tin nhắn ví dụ trong phần chat messages.
+    Thêm lớp .chat-active để hiển thị phần chat.
+    sendMessageBtn.addEventListener('click', function() {...}): Khi nhấn nút gửi tin nhắn:
+    Lấy nội dung tin nhắn.
+    Tạo và thêm tin nhắn gửi đi vào phần chat messages.
+    Xóa nội dung trong input sau khi gửi.
+    messageInput.addEventListener('keypress', function(event) {...}): Khi nhấn Enter trong input để gửi tin nhắn:
+    Kích hoạt sự kiện click trên nút gửi tin nhắn.
+    */
 });
 document.addEventListener("DOMContentLoaded", function() {
     const userLinks = document.querySelectorAll('.user-link ul li');
@@ -205,4 +227,12 @@ document.addEventListener('DOMContentLoaded', function () {
         slideBar1.classList.remove('active');
         closeSidebar.classList.remove('active');
     });
+    /*
+    menuIcon.addEventListener('click', function () {...}): Khi người dùng nhấp vào biểu tượng menu (menuIcon), 
+    thực hiện đoạn mã bên trong hàm.
+    slideBar1.classList.toggle('active'): Thêm hoặc xóa lớp active cho slideBar1. 
+    Lớp active thường được dùng để hiển thị hoặc ẩn thanh bên (sidebar) bằng CSS.
+    closeSidebar.classList.toggle('active'): Thêm hoặc xóa lớp active cho closeSidebar
+    Lớp active thường được dùng để hiển thị hoặc ẩn nút đóng sidebar bằng CSS
+    */
 });

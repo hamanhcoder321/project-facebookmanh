@@ -417,7 +417,9 @@ html, body {
     .slide-bar-2 {
         width: 100%;
     }
-
+    .slide-bar-1 img{
+        display: none;
+    }
     .slide-bar-2.hidden {
         display: none;
     }
