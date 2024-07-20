@@ -391,7 +391,7 @@ html, body {
         display: inline;
     }
     .slide-bar-1 {
-        display: block; /* Ensure it is displayed on mobile */
+        display: block; 
         position: fixed;
         left: -100%;
         width: 60px;
