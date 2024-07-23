@@ -86,6 +86,7 @@ window.addEventListener('click', function(event) {
     */
 });
 
+
 //nút like và comment
 document.addEventListener('DOMContentLoaded', function() {
     // Xử lý sự kiện khi click vào biểu tượng Like
@@ -155,4 +156,21 @@ document.addEventListener('DOMContentLoaded', function() {
     IntersectionObserver: Quan sát sự xuất hiện của video trong khung nhìn (viewport).
     observer.observe(video): Quan sát video để phát hoặc tạm dừng tùy thuộc vào việc video có xuất hiện trong khung nhìn hay không
     */
+});
+// JS cho phần thong báo
+document.addEventListener('DOMContentLoaded', function () {
+    const bellIcon = document.getElementById('bell-icon');
+    const thongbaoLink = document.querySelector('.thongbao-link');
+
+    bellIcon.addEventListener('click', function () {
+        thongbaoLink.classList.toggle('dropdown-menu-hidden');
+        thongbaoLink.classList.toggle('dropdown-menu-visible');
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!bellIcon.contains(event.target) && !thongbaoLink.contains(event.target)) {
+            thongbaoLink.classList.add('dropdown-menu-hidden');
+            thongbaoLink.classList.remove('dropdown-menu-visible');
+        }
+    });
 });
