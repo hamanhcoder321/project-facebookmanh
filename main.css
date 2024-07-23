@@ -485,9 +485,6 @@ body,html{
   cursor: pointer;
   display: block;
 }
-.profile-dropdown-menu li i{
-  display: block;
-}
 .profile-dropdown-menu li:hover {
   background-color: #898888;
 }
