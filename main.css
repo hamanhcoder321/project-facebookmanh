@@ -18,7 +18,9 @@ body,html{
   justify-content: center;
   position: relative;
 }
-
+.header .logo{
+  cursor: pointer;
+}
 .header {
   background-color: rgb(230, 176, 231);
   width: 100%;

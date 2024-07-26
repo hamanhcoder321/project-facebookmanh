@@ -174,3 +174,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+//sự kiện download lại trang chủ
+function homelink() {
+    window.location.href = "./index.html"; //load lại file index.html
+}
