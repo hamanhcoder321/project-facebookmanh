@@ -318,7 +318,6 @@ body,html{
   padding: 10px;
   top: 60px; 
   z-index: 1;
-  overflow-y: auto; 
   border-radius: 10px;
 }
 
