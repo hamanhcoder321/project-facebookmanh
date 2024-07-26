@@ -913,7 +913,6 @@ body,html{
   }
   .header__cart-notice {
     font-size: 0.9rem;
-    top: -1px;
     right: 106px;
     padding: 0px 6px;
     font-size: 0.9rem;
