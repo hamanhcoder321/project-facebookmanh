@@ -321,17 +321,35 @@ body,html{
   top: 60px; 
   z-index: 1;
   border-radius: 10px;
+  overflow: hidden;/*ẩn cuộn mặc định*/
+  transition: overflow-y 0.3s ease-in-out;/*hiệu ứng chuyển tiếp*/
 }
 
 .slide-bar-left:hover, .slide-bar-right:hover {
-  overflow-y: auto;
+  overflow-y: scroll;
+  display: block;
 }
 
 .slide-bar-left {
   position: fixed;
   left: 10px;
 }
+.slide-bar-left img, .slide-bar-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển tiếp */
+}
+.slide-bar-right .menu-item-1, .slide-bar-right .menu-item-2 {
+  display: flex;
+  align-items: center;
+}
 
+.slide-bar-right .menu-item-1 img, .slide-bar-right .menu-item-2 img {
+  width: 250px; /* Đặt kích thước cố định */
+  height: 250px; /* Đặt kích thước cố định */
+  margin-right: 10px; /* Khoảng cách giữa ảnh và văn bản */
+}
 .slide-bar-right {
   position: fixed;
   right: 10px;
@@ -923,5 +941,11 @@ body,html{
   }
   .thongbao-link{
     right: 40px;
+  }
+  .logo img {
+    margin-left: 3px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 5px;
   }
 }
