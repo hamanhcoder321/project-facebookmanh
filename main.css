@@ -348,7 +348,6 @@ body,html{
 .slide-bar-right .menu-item-1 img, .slide-bar-right .menu-item-2 img {
   width: 250px; /* Đặt kích thước cố định */
   height: 250px; /* Đặt kích thước cố định */
-  margin-right: 10px; /* Khoảng cách giữa ảnh và văn bản */
 }
 .slide-bar-right {
   position: fixed;
