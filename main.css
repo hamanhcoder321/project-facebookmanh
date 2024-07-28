@@ -126,7 +126,8 @@ body,html{
 }
 .menu-link a{
   text-decoration: none;
-}/* CSS cho thông báo bell */
+}
+/* CSS cho thông báo bell */
 #bell-icon {
   position: relative;
   font-size: 24px;
@@ -136,7 +137,7 @@ body,html{
 /* CSS cho thông báo số lượng */
 .header__cart-notice-1 {
   position: absolute;
-  top: -10px;
+  top: -6px;
   right: -10px;
   background-color: red;
   color: white;
@@ -821,7 +822,7 @@ body,html{
 .comments-container .comment:last-child {
   border-bottom: none;
 }
-@media (max-width: 899px) and (max-width: 876px) {
+@media (max-width: 980px) and (max-width: 880px) {
   .slide-bar-right {
     display: block;
   }
@@ -846,8 +847,11 @@ body,html{
     width: 120px;
     height: 200px;
   }
+  .header__cart-notice {
+    right: 228px;
+  }
 }
-@media (max-width: 768px){
+@media (max-width: 992px) and (max-width: 1200px){
   .header .container {
     padding: 0 8px;
   }
@@ -931,7 +935,7 @@ body,html{
   .header__cart-notice {
     font-size: 0.9rem;
     top: 6px;
-    right: 106px;
+    left: 433px;
     padding: 0px 6px;
     font-size: 0.9rem;
     line-height: 1.4rem;
@@ -948,3 +952,16 @@ body,html{
     margin-top: 5px;
   }
 }
+@media (max-width: 500px) and (max-width: 576px){
+  .header__cart-notice{
+    left: 285px;
+  }
+}
+
+/** Tỉ lệ màn hình điện thoại
+Điện thoại di động nhỏ: dưới 576px
+Điện thoại di động trung bình: từ 576px đến 768px
+Máy tính bảng: từ 768px đến 992px
+Máy tính bảng lớn và thiết bị nhỏ: từ 992px đến 1200px
+Màn hình lớn hơn: từ 1200px trở lên
+*/
